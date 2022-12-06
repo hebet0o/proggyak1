@@ -34,7 +34,7 @@ int numberCheck(int system, char szam[], int szamhossz)
         if(system <= 10)
         {
             for (int i = 0; i < szamhossz; ++i) {
-                if(!isdigit(szam[i]))    ///isdigit() megállapítja hogy egy string decimális értékekből áll-e
+                if(!isdigit(szam[i]))    ///isdigit() megállapítja hogy egy string decimális értékekből áll-e ctype.h include kell hozzá
                 {
                     return 0;
                 }
@@ -43,7 +43,7 @@ int numberCheck(int system, char szam[], int szamhossz)
         }
         else{
             for (int i = 0; i < szamhossz; ++i) {
-                if(!isxdigit(szam[i]))  ///isxdigit() megállapítja hogy egy string hexadecimális értékekből áll-e
+                if(!isxdigit(szam[i]))  ///isxdigit() megállapítja hogy egy string hexadecimális értékekből áll-e ctype.h include ehez is kell.
                 {
                     return 0;
                 }
